@@ -19,9 +19,8 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  #phone.match?(/\d+-\d+-\d+/)
-  #phone.match?(/\b[0-9]{10}\b/)
-  #phone.match?(/\b^([0-9]{10})$\b/)
-  phone.match?(/([0-9] *?){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)/)
+  phone.match?((/(\d+)-(\d+)-(\d+)/)|(/\d+/)) 
+ 
+  #phone.match?(/([0-9] *?){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)/)
   
 end
